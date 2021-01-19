@@ -7,7 +7,7 @@ char *b64_recv(SOCKET s, size_t buffer_size, size_t *out_size)
 
 	while( 1 )
 	{
-		int break_from_while = 0;
+		_Bool break_from_while = 0;
 		char buffer[buffer_size];
 		recv(s, buffer, buffer_size, 0);
 		for(int i = 0; i < buffer_size; i++)
